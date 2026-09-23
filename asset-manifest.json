@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/wordle-dev/static/css/main.ffac0915.css",
+    "main.css": "/wordle-dev/static/css/main.44b38b61.css",
     "main.js": "/wordle-dev/static/js/main.242d0a8b.js",
     "static/js/206.3d97cd5e.chunk.js": "/wordle-dev/static/js/206.3d97cd5e.chunk.js",
     "index.html": "/wordle-dev/index.html"
   },
   "entrypoints": [
-    "static/css/main.ffac0915.css",
+    "static/css/main.44b38b61.css",
     "static/js/main.242d0a8b.js"
   ]
 }
