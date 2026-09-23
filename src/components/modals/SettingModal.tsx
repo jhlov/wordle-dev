@@ -25,13 +25,13 @@ const SettingModal = () => {
 
   const onChangeHardmode = (e: React.ChangeEvent) => {
     const v = (e.target as HTMLInputElement).checked;
-    localStorage.setItem("wordle-hardmode", v.toString());
+    localStorage.setItem("dev-wordle-hardmode", v.toString());
     dispatch(setHardmode(v));
   };
 
   const onChangeDarkmode = (e: React.ChangeEvent) => {
     const v = (e.target as HTMLInputElement).checked;
-    localStorage.setItem("wordle-darkmode", v.toString());
+    localStorage.setItem("dev-wordle-darkmode", v.toString());
     dispatch(setDarkmode(v));
 
     if (v) {
@@ -43,7 +43,7 @@ const SettingModal = () => {
 
   const onChangeContrastmode = (e: React.ChangeEvent) => {
     const v = (e.target as HTMLInputElement).checked;
-    localStorage.setItem("wordle-contrast", v.toString());
+    localStorage.setItem("dev-wordle-contrast", v.toString());
     dispatch(setContrastmode(v));
 
     if (v) {

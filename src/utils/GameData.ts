@@ -23,12 +23,12 @@ export const initGameData: GameData = {
 export const getGameDataFromLS = (gameType: GameType): GameData => {
   const key =
     gameType === "INFINITE"
-      ? "wordle-gamedata-infinite"
+      ? "dev-wordle-gamedata-infinite"
       : gameType === "BATTLE"
-      ? "wordle-gamedata-battle"
+      ? "dev-wordle-gamedata-battle"
       : gameType === "CUSTOM"
-      ? "wordle-gamedata-custom"
-      : "gameData";
+      ? "dev-wordle-gamedata-custom"
+      : "dev-gameData";
   const str = localStorage.getItem(key);
   if (str) {
     const data: GameData = JSON.parse(str);
@@ -47,11 +47,11 @@ export const getGameDataFromLS = (gameType: GameType): GameData => {
 export const saveGameData = (gameType: GameType, gameData: GameData) => {
   const key =
     gameType === "INFINITE"
-      ? "wordle-gamedata-infinite"
+      ? "dev-wordle-gamedata-infinite"
       : gameType === "BATTLE"
-      ? "wordle-gamedata-battle"
+      ? "dev-wordle-gamedata-battle"
       : gameType === "CUSTOM"
-      ? "wordle-gamedata-custom"
-      : "gameData";
+      ? "dev-wordle-gamedata-custom"
+      : "dev-gameData";
   localStorage.setItem(key, JSON.stringify(gameData));
 };

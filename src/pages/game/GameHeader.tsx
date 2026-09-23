@@ -77,6 +77,7 @@ const GameHeader = () => {
         <h1 className="m-0 p-0">
           {moment().month() === 2 && moment().date() === 1 && <span>🇰🇷 </span>}
           {title}
+          <span className="dev-badge">DEV</span>
         </h1>
 
         <div>

@@ -11,7 +11,7 @@ import { addToast } from "store/common";
 import { LETTER_COUNT, ROW_COUNT } from "utils/const";
 import "./GameBody.scss";
 import { GameTile } from "./GameTile";
-ReactGA.initialize("G-L07VJN65FL");
+ReactGA.initialize("G-L07VJN65FL", { testMode: true });
 
 interface Props {
   shake: boolean;

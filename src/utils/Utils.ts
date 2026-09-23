@@ -85,23 +85,28 @@ export const Utils = {
   ) => {
     const title =
       gameType === "NORMAL"
-        ? "워들"
+        ? "워들 DEV"
         : gameType === "INFINITE"
-        ? "무한워들"
+        ? "무한워들 DEV"
         : gameType === "CUSTOM"
-        ? "워들커스텀"
-        : "워들vsAI";
+        ? "워들커스텀 DEV"
+        : "워들vsAI DEV";
 
     const id = gameType === "CUSTOM" ? "" : `${gameData.id} `;
 
+    const pathname = window.location.pathname.endsWith("/")
+      ? window.location.pathname
+      : `${window.location.pathname}/`;
+    const baseUrl = `${window.location.origin}${pathname}`;
+
     const site =
       gameType === "NORMAL"
-        ? "https://jhlov.github.io/wordle\n\n"
+        ? `${baseUrl}\n\n`
         : gameType === "INFINITE"
-        ? "https://jhlov.github.io/wordle/#/infinite\n\n"
+        ? `${baseUrl}#/infinite\n\n`
         : gameType === "CUSTOM"
-        ? `https://jhlov.github.io/wordle/#/c/${key}\n\n`
-        : "https://jhlov.github.io/wordle/#/battle\n\n";
+        ? `${baseUrl}#/c/${key}\n\n`
+        : `${baseUrl}#/battle\n\n`;
 
     let state = "";
     if (gameType === "BATTLE") {

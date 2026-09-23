@@ -6,7 +6,7 @@ import Hangul from "hangul-js";
 import _ from "lodash";
 import qs from "qs";
 import React, { useEffect, useMemo, useState } from "react";
-import AdSense from "react-adsense";
+// import AdSense from "react-adsense";
 import { isMobile } from "react-device-detect";
 import ReactGA from "react-ga4";
 import { useDispatch, useSelector } from "react-redux";
@@ -41,7 +41,7 @@ import { GameBody } from "./GameBody";
 import { GameHeader } from "./GameHeader";
 import { GameKeyboard } from "./GameKeyboard";
 import { GameKeyboardInput } from "./GameKeyboardInput";
-ReactGA.initialize("G-L07VJN65FL");
+ReactGA.initialize("G-L07VJN65FL", { testMode: true });
 
 export interface ResultSummaryRes {
   id: number;
@@ -628,13 +628,13 @@ const Game = ({ match }: RouteComponentProps) => {
         onClickEner={onClickEnter}
         onClickBack={onClickBack}
       />
-      <AdSense.Google
+      {/* <AdSense.Google
         className="mt-4 mb-2"
         style={{ display: "inline-block", width: "100%", height: 90 }}
         client="ca-pub-7150456660061561"
         slot="3236246273"
         format=""
-      />
+      /> */}
     </div>
   );
 };

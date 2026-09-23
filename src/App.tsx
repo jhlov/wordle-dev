@@ -16,17 +16,17 @@ function App() {
   const isMobile = true;
 
   useEffect(() => {
-    const harmode = localStorage.getItem("wordle-hardmode") === "true";
+    const harmode = localStorage.getItem("dev-wordle-hardmode") === "true";
     dispatch(setHardmode(harmode));
 
-    const darkmode = localStorage.getItem("wordle-darkmode") === "true";
+    const darkmode = localStorage.getItem("dev-wordle-darkmode") === "true";
     dispatch(setDarkmode(darkmode));
 
     if (darkmode) {
       document.body.classList.add("darkmode");
     }
 
-    const contrastmode = localStorage.getItem("wordle-contrast") === "true";
+    const contrastmode = localStorage.getItem("dev-wordle-contrast") === "true";
     dispatch(setContrastmode(contrastmode));
 
     if (contrastmode) {
